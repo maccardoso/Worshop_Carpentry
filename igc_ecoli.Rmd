@@ -1,0 +1,57 @@
+---
+title: "R tutorial: IGC Ecoli Metadata"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  error = FALSE
+  )
+```
+
+## Introduction
+
+Lets start by loading the R script with the data.
+
+
+```{r}
+source("scripts/load_ecoli.R")
+head(metadata)
+```
+
+---
+
+Print the head
+
+```{r}
+head(metadata)
+```
+
+---
+
+Show a plot of sample against genome_size
+
+```{r}
+library("ggplot2")
+
+ggplot(metadata,aes(x = sample, y = genome_size, color = generation)) + geom_point() + theme(axis.text.x = element_text(angle = 60, hjust = 1))
+
+```
+
+
+Show a boxplot
+
+```{r}
+ggplot(metadata, aes(x = cit, y = genome_size, fill = cit)) + geom_boxplot()
+```
+
+
+Show a Histogram
+
+```{r}
+ggplot(metada, aes())
+```
+
