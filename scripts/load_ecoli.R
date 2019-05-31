@@ -6,3 +6,5 @@ download.file(url =  "https://raw.githubusercontent.com/datacarpentry/R-genomics
 
 metadata <- read.csv(file = "data/Ecoli_metadata.csv", stringsAsFactors = FALSE)
 
+
+# comment
